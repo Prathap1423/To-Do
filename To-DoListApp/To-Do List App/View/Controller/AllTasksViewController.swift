@@ -145,6 +145,7 @@ class AllTasksViewController: UIViewController, UISearchControllerDelegate {
         inputTaskField.text = ""
         dueDateBtn.setTitle(Date().userFormat(), for: .normal)
         segmentedControl.selectedSegmentIndex = 0
+        taskPriority = .low
         inputTaskField.resignFirstResponder()
         blurView.isHidden = true
         UIView.animate(withDuration: 0.3) {
