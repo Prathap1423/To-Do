@@ -33,7 +33,9 @@ class TaskDetailsViewModel {
     }
     
     func updateTask(_ task: Task) {
-        taskViewModel.updateTask(task)
+        DispatchQueue.main.async {
+            self.taskViewModel.updateTask(task)
+        }
     }
     
     func loadImageFromDocumentsDirectory(filename: String) -> UIImage? {
